@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        function DangKy()
+        {
+            var usernam = document.querySelector("#usernam");
+            var password = document.querySelector("#password");
+            var re_password = document.querySelector("#re-password");
+
+            if(usernam==""){
+                alert("bạn chưa nhập usernam");
+                return false;
+            }
+            if(password==""){
+                alert("bạn chưa nhập password");
+                return false;
+            }
+            if(password!=re_password){
+                alert("mật khẩu nhập lại không đúng");
+                return false;
+            }
+            alert("bạn đã đăng ký thành công");
+            return true;
+            
+
+        }
+    </script>
+    <div>
+        <h1>Đăng Ký</h1>
+    </div>
+    <form action="">
+        Usernam:&nbsp;<input type="text" value="" name="usernam" id="usernam"><br/>
+        Password:&nbsp;<input type="password" value="" name="password" id="password"><br/>
+        Re Password:<input type="password" value="" name="re-password" id="re-password"><br/>
+        <input type="submit" value="Register" onclick="return DangKy()">
+    </form>
+</body>
+</html>

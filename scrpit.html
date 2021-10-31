@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JS</title>
+</head>
+<body>
+  <h1 style="color: red;">Máy Tính Cầm Tay</h1>
+  
+  <input type="text" placeholder="mời nhập số a" id="a"><br/>
+  <input type="text" placeholder="phép toán" id="b"><br/>
+  <input type="text" placeholder="mời nhập số b" id="c"><br/>
+  <input type="text" placeholder="Kết Quả" id="d"><br/>
+  <button type="button" id="action">Tính</button>
+  <script>
+      
+     var btnAction = document.querySelector("#action");
+     var txtA = document.querySelector("#a");
+     var txtB = document.querySelector("#b");
+     var txtC = document.querySelector("#c");
+     var txtD = document.querySelector("#d");
+     
+     btnAction.onclick = function(){
+       var valA =Number (txtA.value);
+       var valB = txtB.value;
+       var valC =Number(txtC.value);
+
+       var operators = ['+',"-",'*','/'];
+        if(operators.indexOf(valB)<0){
+          alert=("phép toán ko hợp lệ");
+          txtB.value ='';
+          txtB.focus();
+          return;
+        }
+
+        txtD.value=eval(valA+valB+valC);
+     }
+        
+  </script>
+</body>
+</html>
+
+

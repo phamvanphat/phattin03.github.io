@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+</head>
+<body>
+    
+    <script>
+        function Inso1denN(){
+            var n = document.getElementById("abc").value;
+
+            n=parseInt (n);
+
+            var kq = '';
+                for(var i=1;i<=n;i++)
+                
+                    kq +=i + '<br/>';
+                    document.getElementById("HienThi").innerHTML = kq;
+                
+                
+        }
+    </script>
+    <form method="get" action="">
+        Mời Nhập Số: <input type="text" id="abc" value="0">
+        <input type="button" value="In Kết Quả" onclick="Inso1denN()">
+    </form>
+    <div id="HienThi">
+
+    </div>
+</body>
+</html>
